@@ -1,0 +1,193 @@
+/* css da edição */
+
+:root {
+    --main-color: #d240ff;
+    --link-color: #666666;
+    --text1: #999999;
+    --highligth-text: #ac37d0;
+    --input-text: #703b8b;
+    --white-color: #f1f1f1;
+    --point-list: #CCCCCC;
+    --line-input: #d9d9d9;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    background: var(--white-color);
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+input,
+button {
+    outline: none !important;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.margin-bottom-35 {
+    margin-bottom: 35px;
+}
+
+.margin-top-35 {
+    margin-top: 35px;
+}
+
+.margin-bottom-8 {
+    margin-bottom: 8px;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-left-50 {
+    margin-left: 50px;
+}
+        
+
+.container, .container-cad {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+}
+
+.cadastro , .cadastroF{
+    background: var(--white-color);
+    height: 100%;
+    width: 100%;
+}
+
+.cadastroT {
+    font-family: Poppins-Bold;
+    font-size: 25px;
+    color: var(--highligth-text);
+    margin-left: 23%;
+}
+
+.blocos {
+    font-family: Poppins-Regular;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.wrap-input {
+    position: relative;
+    border-bottom: 2px solid var(--line-input);
+}
+
+.input-form {
+    font-family: Poppins-SemiBold;
+    font-size: 18px;
+    color: var(--input-text);
+    line-height: 1.2;
+    width: 100%;
+    height: 52px;   
+    background: transparent;
+}
+
+.focus-input-form {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.label {
+    color: var(--text1);
+}
+
+.focus-input-form::before {
+    content: "";
+    display: block;
+    background: var(--main-color);
+}
+
+.focus-input-form::after {
+    content: attr(data-placeholder);
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    color: var(--text1);
+    line-height: 1.2;
+}
+
+.input-form:focus+.focus-input-form::after {
+    top: -10px;
+    font-size: 15px;
+}
+
+.input-form:focus+.focus-input-form::before {
+    width: 100%;
+}
+
+.has-val.input-form+.focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+}
+
+.has-val.input-form+.focus-input-form::before {
+    width: 100%;
+}
+
+.container-cadastroBTN {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cadastroF-btnS , .cadastroF-btnE , .cadastroF-btnC , .cadastroF-btnV {
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: var(--white-color);
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 0 15px;    
+    height: 30px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.cadastroF-btnS , .cadastroF-btnE , .cadastroF-btnC , .cadastroF-btnV {
+    background-color: var(--highligth-text);
+    margin-left: 7px;
+    margin-top: 20px;
+}
